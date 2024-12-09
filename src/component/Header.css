@@ -1,0 +1,186 @@
+@media (max-width:1057px){
+    .sec-2{
+        width: 45%;
+        height: 2.2rem;
+    }
+}
+@media (max-width:963px){
+    #img-id{
+        width: 30px;
+        height: 24px;
+    }
+    #youtube-head{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width:873px){
+    #img-id{
+        width: 30px;
+        height: 24px;
+    }
+    #youtube-head{
+        font-size: 1.2rem;
+    }
+    .sec-3{
+        margin-right: 0.8rem;
+    }
+    #sec3-button{
+        padding: 0.3rem 0.8rem;
+    }
+}
+@media (max-width:797px){
+    #img-id{
+        width: 27px;
+        height: 22px;
+    }
+    #youtube-head{
+        font-size: 1rem;
+    }
+    .sec-3{
+        margin-right: 0.6rem;
+    }
+    #sec3-button{
+        padding: 0.3rem 0.7rem;
+    }
+    #img-container{
+        margin-left: 0.4rem;
+    }
+}
+@media (max-width:701px){
+    #img-id{
+        width: 27px;
+        height: 22px;
+    }
+    #youtube-head{
+        font-size: 1rem;
+    }
+    .sec-3{
+        margin-right: 0.5rem;
+    }
+    #sec3-button{
+        padding: 0.3rem 0.7rem;
+    }
+    #img-container{
+        margin-left: 0.3rem;
+    }
+    #signin-text{
+        font-size: 0.9rem;
+    }
+}
+@media (max-width:658px){
+    #img-id{
+        width: 27px;
+        height: 22px;
+    }
+    #youtube-head{
+        font-size: 0.8rem;
+    }
+    .sec-3{
+        margin-right: 0.5rem;
+    }
+    #sec3-button{
+        padding: 0.2rem 0.6rem;
+    }
+    #img-container{
+        margin-left: 0.3rem;
+    }
+    #signin-text{
+        font-size: 0.8rem;
+    }
+    #menu-margin{
+        margin-right: 0rem;
+    }
+}
+@media (max-width:588px){
+    #img-id{
+        width: 22px;
+        height: 18px;
+    }
+    #youtube-head{
+        font-size: 0.7rem;
+    }
+    .sec-2{
+        height:1.56;
+        width: 40%;
+    }
+    .sec-3{
+        margin-right: 0.5rem;
+    }
+    #sec3-button{
+        /* background-color: red; */
+        border: none;
+        padding: none;
+        margin-right: -15px;
+    }
+    #img-container{
+        margin-left: 0.3rem;
+    }
+    #signin-text{
+        font-size: 0.6rem;
+        display: none;
+    }
+    #menu-margin{
+        margin-right: 0rem;
+    }
+    #dot-icon{
+        margin-right: -12px;
+    }
+    #input-id{
+        width: 80%;
+        outline: none;
+    }
+    #search-btn{
+        width: 20%;
+    }
+    .sec-1{
+        margin-left: -10px;
+    }
+}
+@media (max-width:461px){
+    #img-id{
+        width: 22px;
+        height: 18px;
+    }
+    #youtube-head{
+        font-size: 0.7rem;
+    }
+    .sec-2{
+        margin-top: 3px;
+        height:1.64rem;
+        width: 48%;
+    }
+    .sec-3{
+        margin-right: 0.5rem;
+    }
+    #sec3-button{
+        /* background-color: red; */
+        border: none;
+        padding: none;
+        margin-right: -15px;
+    }
+    #img-container{
+        margin-left: -4px;
+    }
+    #signin-text{
+        font-size: 0.6rem;
+        display: none;
+    }
+    #menu-margin{
+        margin-right: 0rem;
+    }
+    #dot-icon{
+        margin-right: -12px;
+    }
+    #input-id{
+        width: 80%;
+        outline: none;
+        padding-left: 0.4rem;
+    }
+    #search-btn{
+        width: 20%;
+    }
+    .sec-1{
+        margin-left: -14px;
+    }
+}

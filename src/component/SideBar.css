@@ -1,0 +1,58 @@
+@media(max-width:1190px){
+    .sideBar-description{
+        font-size: 0.9rem;
+    }
+}
+@media(max-width:1190px){
+    .sideBar-description{
+        font-size: 0.8rem;
+    }
+}
+@media (max-width:1064px){
+    .sideBar-description{
+        width: 17%;
+    }
+}
+@media (max-width:1000px){
+    #side-bar-sec1{
+        width: 10%;
+    }
+}
+@media (max-width:494px){
+    #side-bar-sec1{
+        width: 15%;
+    }
+}
+@media (max-width:950px){
+    .sideBar-description{
+        width: 20%;
+    }
+}
+@media (max-width:806px){
+    .sideBar-description{
+        width: 25%;
+    }
+}
+@media (max-width:806px){
+    .sideBar-description{
+       font-size: 0.6rem;
+    }
+}
+@media (max-width:546px){
+    .sideBar-description{
+       font-size: 0.6rem;
+       width: 30%;
+    }
+}
+@media (max-width:479px){
+    .sideBar-description{
+       font-size: 0.5rem;
+       width: 33%;
+    }
+}
+@media (max-width:400px){
+    .sideBar-description{
+       font-size: 0.5rem;
+       width: 39%;
+    }
+}
