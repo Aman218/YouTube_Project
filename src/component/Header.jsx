@@ -5,6 +5,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import Sidebar from './SideBar';
 import { useState } from 'react';
 import './Header.css';
+import VideoCard from './VideoCard';
 function Header(){
 
  const [flag,setFlag]=useState(true);
@@ -13,7 +14,7 @@ function Header(){
  }
     return (
         <>
-          <div className="header-sec flex justify-between p-2 text-white">
+          <div className="header-sec fixed top-0 w-[100%] z-40  bg-[#0F0F0F] flex  justify-between p-2 text-white">
                <div className="sec-1 flex items-center">
                    <div id='menu-margin' className='mr-2'>
                       <button onClick={handleMenuClick} className=' p-2 hover:rounded-full hover:bg-[#212121]'> <MenuIcon className=''/></button>
@@ -26,8 +27,8 @@ function Header(){
                <div className="sec-2 border border-[#646060] h-[3rem]  w-[45%] rounded-[2rem] ">
                      
                      <div className='w-[100%]  h-[100%] flex justify-between'>
-                        <input type="text" name="" id="input-id" placeholder='Search' className=' bg-[#0f0f0f] inline-block w-[90%] h-[100%] rounded-l-[2rem]  pl-7 focus:w-[89.1%] outline-none border-none focus:outline-[#9ab5e38a] focus:outline-[0.07rem]'/>
-                        <button id='search-btn' className='inline-block w-[10%] h-[100%] bg-[#212121] rounded-r-[2rem]'><SearchIcon/></button>
+                        <input type="text" name="" id="input-id" placeholder='Search' className=' bg-[#0f0f0f] inline-block w-[90%] h-[100%] rounded-l-[2rem]  pl-7 focus:w-[89.1%] outline-none border-none focus:outline-[#9ab5e38a] focus:outline-[0.02rem]'/>
+                        <button id='search-btn' className='inline-block w-[10%] h-[100%] bg-[#212121] rounded-r-[2rem] hover:bg-[#30302f]'><SearchIcon/></button>
                         </div>
                      
                </div>
@@ -36,7 +37,10 @@ function Header(){
                     <button id='sec3-button' className='border border-[#959593b1] rounded-full p-2 px-4 hover:rounded-full hover:bg-[#212121] hover:border-[#0f0f0f] '> <PersonIcon className='border border-red-100 rounded-full text-[#fff] '/> <span id='signin-text'>Sign In</span> </button>
                </div>
           </div>
+          <div className='flex'>
         <Sidebar flag={flag}/>
+        <VideoCard flag={flag}/>
+        </div>
         </>
     )
 }

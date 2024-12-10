@@ -138,6 +138,9 @@
     }
 }
 @media (max-width:461px){
+    .header-sec{
+        align-items: center;
+    }
     #img-id{
         width: 22px;
         height: 18px;
@@ -149,6 +152,7 @@
         margin-top: 3px;
         height:1.64rem;
         width: 48%;
+        font-size: 0.78rem;
     }
     .sec-3{
         margin-right: 0.5rem;

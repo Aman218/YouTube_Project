@@ -1,0 +1,10 @@
+#img-size{
+    height: 12.4rem;
+    width: 100%;
+}
+@media (max-width:419px) {
+    
+    #img-size{
+        height: 10.3rem;
+    }
+}

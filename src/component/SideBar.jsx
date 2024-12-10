@@ -21,7 +21,7 @@ function Sidebar(props) {
    return (
       <>
          {props.flag ?
-            <div id='side-bar-sec1' className="side-bar w-[5%] flex flex-col justify-center items-center">
+            <div id='side-bar-sec1' className="side-bar w-[5%] flex flex-col  fixed  left-0 mt-[4rem] ">
 
                <div className=' hover:bg-[#212121] hover:rounded-md flex flex-col justify-center items-center p-3 mb-4 text-white text-sm hover:cursor-pointer'>
                   <HomeIcon />
@@ -46,7 +46,7 @@ function Sidebar(props) {
 
 
             </div> :
-            <div className='sideBar-description w-[15%] overflow-y-scroll h-[80vh] text-white'>
+            <div className='sideBar-description w-[15%] overflow-y-scroll h-[80vh] text-white fixed  left-0 mt-[4rem]'>
                <div className="sidebar-1 border-b border-[#212121] mb-2">
                   <div className='p-3 cursor-pointer hover:bg-[#212121]'>
                      <HomeIcon />
