@@ -7,18 +7,23 @@
     
     position: relative;
     left: 180px;
-    margin-top: 4.5rem;
+    margin-top: 7.9rem;
 }
 #grid-width{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     width: 80%;
     gap: 0.6rem;
-    margin-top: 4.5rem;
+    margin-top: 7.9rem;
     /* background-color: red; */
     
     position: relative;
     left: 260px;
+}
+@media (max-width:1300px) {
+    #button-category{
+        display: none;
+    }
 }
 @media (max-width:1299px) {
     #grid{

@@ -17,7 +17,7 @@ import GolfCourseIcon from '@mui/icons-material/GolfCourse';
 import CheckroomIcon from '@mui/icons-material/Checkroom';
 import './SideBar.css'
 function Sidebar(props) {
-   console.log(props)
+   // console.log(props)
    return (
       <>
          {props.flag ?
@@ -31,9 +31,9 @@ function Sidebar(props) {
                   <VideoCameraFrontIcon />
                   <span className='text-[0.7rem]'>Shorts</span>
                </div>
-               <div className=' hover:bg-[#212121] hover:rounded-md hover:cursor-pointer flex flex-col justify-center items-center p-3 mb-4 text-white text-sm'>
+               <div className=' hover:bg-[#212121] hover:rounded-md hover:cursor-pointer flex flex-col  items-center p-3 mb-4 text-white text-sm'>
                   <SubscriptionsIcon />
-                  <span className='ml-5 text-[0.7rem]'>Subscription</span>
+                  <span className=' text-[0.7rem]'>Enroll</span>
                </div>
                <div className=' hover:bg-[#212121] hover:rounded-md hover:cursor-pointer  flex flex-col justify-center items-center p-3 mb-4 text-white text-sm'>
                   <AccessibilityNewIcon />

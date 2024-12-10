@@ -1,7 +1,7 @@
 import './ShowCard.css';
 import PersonIcon from '@mui/icons-material/Person';
 function ShowCard(props){
-    console.log(props)
+    // console.log(props)
     return (
         <>
 

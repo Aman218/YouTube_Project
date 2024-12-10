@@ -6,9 +6,16 @@ import Sidebar from './SideBar';
 import { useState } from 'react';
 import './Header.css';
 import VideoCard from './VideoCard';
+import { dataInfo } from '../utils/dummyData';
 function Header(){
 
  const [flag,setFlag]=useState(true);
+ const [titleName,setTitleName]=useState('');
+
+ function handleChange(e){
+   setTitleName(e.target.value);
+ 
+ }
  function handleMenuClick(){
     setFlag(!flag);
  }
@@ -27,7 +34,7 @@ function Header(){
                <div className="sec-2 border border-[#646060] h-[3rem]  w-[45%] rounded-[2rem] ">
                      
                      <div className='w-[100%]  h-[100%] flex justify-between'>
-                        <input type="text" name="" id="input-id" placeholder='Search' className=' bg-[#0f0f0f] inline-block w-[90%] h-[100%] rounded-l-[2rem]  pl-7 focus:w-[89.1%] outline-none border-none focus:outline-[#9ab5e38a] focus:outline-[0.02rem]'/>
+                        <input type="text" name="" onChange={(e)=>{handleChange(e)}} id="input-id" placeholder='Search' className=' bg-[#0f0f0f] inline-block w-[90%] h-[100%] rounded-l-[2rem]  pl-7 focus:w-[89.1%] outline-none border-none focus:outline-[#9ab5e38a] focus:outline-[0.02rem]'/>
                         <button id='search-btn' className='inline-block w-[10%] h-[100%] bg-[#212121] rounded-r-[2rem] hover:bg-[#30302f]'><SearchIcon/></button>
                         </div>
                      
@@ -39,7 +46,7 @@ function Header(){
           </div>
           <div className='flex'>
         <Sidebar flag={flag}/>
-        <VideoCard flag={flag}/>
+        <VideoCard flag={flag} titleName={titleName}/>
         </div>
         </>
     )

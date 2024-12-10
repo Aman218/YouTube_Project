@@ -5,7 +5,8 @@ export const dataInfo=[{
     description:'Umbridge In The Forbidden Forest - Harry Potter And The Order Of The Phoenix',
     owner:'Aman Singh',
     views:'11.2M Views',
-    time:'4 years ago'
+    time:'4 years ago',
+    genre:'entertainment'
 },
 {
     id:2,
@@ -14,7 +15,8 @@ export const dataInfo=[{
     description:'Wizard Battle: Dumbledore vs Voldemort | Harry Potter and the Order of the Phoenix',
     owner:'Aman Singh',
     views:'10.2M Views',
-    time:'6 years ago'
+    time:'6 years ago',
+    genre:'entertainment'
 
 },
 {
@@ -24,7 +26,8 @@ export const dataInfo=[{
     description:'Kung Fu Panda (2008) - Our Battle Will Be Legendary! Scene (7/10) | Movieclips',
     owner:'Aman Singh',
     views:'7.2M Views',
-    time:'10 years ago'
+    time:'10 years ago',
+    genre:'entertainment'
 }
 ,
 {
@@ -34,7 +37,8 @@ export const dataInfo=[{
     description:'Mediocrity is Rising | Raw and real talk before 2024 ends.',
     owner:'Aman Singh',
     views:'1.2M Views',
-    time:'2 days ago'
+    time:'2 days ago',
+    genre:'education'
 },
 {
     id:5,
@@ -43,7 +47,8 @@ export const dataInfo=[{
     description:'Emergency | Official Trailer | In Cinemas 17th January, 2025 | Kangana Ranaut',
     owner:'Aman Singh',
     views:'30.2M Views',
-    time:'2 months ago'
+    time:'2 months ago',
+    genre:'entertainment'
 },
 {  
 
@@ -52,8 +57,9 @@ export const dataInfo=[{
     video_url:"https://www.youtube.com/embed/02pr2W7FT-c?si=dYX5ILLMpBB3S2FK",
     description:'Reference Types: Objects && Arrays in JS || JavaScript Series 2024',
     owner:'Aman Singh',
-    views:'100k Views',
-    time:'3 months ago'
+    views:'100K Views',
+    time:'3 months ago',
+    genre:'education'
 
 },
 {  
@@ -63,8 +69,9 @@ export const dataInfo=[{
     video_url:"https://www.youtube.com/embed/02pr2W7FT-c?si=dYX5ILLMpBB3S2FK",
     description:'TechXcelerate 24 - Day 4: Blockchain with Kanishk Khurana',
     owner:'Aman Singh',
-    views:'140k Views',
-    time:'3 months ago'
+    views:'140K Views',
+    time:'3 months ago',
+    genre:'education'
 
 },
 {  
@@ -75,7 +82,8 @@ export const dataInfo=[{
     description:'Vijayi Bhava - Full Video | Manikarnika | Kangana Ranaut | Shankar Ehsaan Loy | Prasoon Joshi',
     owner:'Aman Singh',
     views:'140M Views',
-    time:'3 years ago'
+    time:'3 years ago',
+    genre:'songs'
 
 },{
     id:9,
@@ -84,7 +92,8 @@ export const dataInfo=[{
     description:'Harry Potter and the Deathly Hallows - Main Trailer',
     owner:'Aman Singh',
     views:'10M Views',
-    time:'18 years ago'
+    time:'18 years ago',
+    genre:'entertainment'
 },
 {
     id:10,
@@ -93,7 +102,8 @@ export const dataInfo=[{
     description:'E-Commerce clone will not get you hired - Real world project ideas',
     owner:'Aman Singh',
     views:'1M Views',
-    time:'1 years ago'
+    time:'1 years ago',
+    genre:'education'
 },
 {
     id:11,
@@ -102,7 +112,8 @@ export const dataInfo=[{
     description:'DSA Complete Series 🚀 : Data Structures & Algorithms | by Shradha Khapra Ma"am',
     owner:'Aman Singh',
     views:'1M Views',
-    time:'1 years ago'
+    time:'1 years ago',
+    genre:'education'
 },
 {
     id:12,
@@ -111,7 +122,8 @@ export const dataInfo=[{
     description:'Kamla Harris Says she will Use Everything if Ukraine Gets Nukes | Vantage With Palki Sharma',
     owner:'Aman Singh',
     views:'1M Views',
-    time:'1 years ago'
+    time:'1 years ago',
+    genre:'news'
 
 },
 {
@@ -121,7 +133,8 @@ export const dataInfo=[{
     description:'How CANADA is becoming NEXT PAKISTAN | Abhi and Niyu',
     owner:'Aman Singh',
     views:'4M Views',
-    time:'12 days ago'
+    time:'12 days ago',
+    genre:'news'
 
 },
 {
@@ -131,7 +144,8 @@ export const dataInfo=[{
     description:'GSoC 2025 Complete Roadmap | Google Summer of Code',
     owner:'Aman Singh',
     views:'1M Views',
-    time:'1 years ago'
+    time:'1 years ago',
+    genre:'education'
 }
 ,
 {
@@ -141,7 +155,8 @@ export const dataInfo=[{
     description:'Aandhi | Article 370 | Yami Gautam | Shashwat Sachdev | Clinton Cerejo | Shahzad Ali',
     owner:'Aman Singh',
     views:'1M Views',
-    time:'1 years ago'
+    time:'1 years ago',
+    genre:'songs'
 },
 {
     id:16,
@@ -150,7 +165,8 @@ export const dataInfo=[{
     description:'Chefling के owner ने pitch से पहले Sharks को दी एक दिलचस्प रिश्वत | Mouth-watering Pitches',
     owner:'Aman Singh',
     views:'1.4M Views',
-    time:'1 years ago'
+    time:'1 years ago',
+    genre:'entertainment'
 },
 {
     id:17,
@@ -159,7 +175,8 @@ export const dataInfo=[{
     description:'TVFs Kota Factory | Exam Anthem | Lets Crack it!',
     owner:'Aman Singh',
     views:'1.9M Views',
-    time:'2 years ago'
+    time:'2 years ago',
+    genre:'songs'
 },
 {
     id:18,
@@ -168,7 +185,8 @@ export const dataInfo=[{
     description:'Obliviate',
     owner:'Aman Singh',
     views:'3.9M Views',
-    time:'12 years ago'
+    time:'12 years ago',
+    genre:'songs'
 
 }
 ,
@@ -179,7 +197,8 @@ export const dataInfo=[{
     description:'Hamas leader Yahya Sinwar׳s exclusive interview on BBC',
     owner:'Aman Singh',
     views:'3.4M Views',
-    time:'1 years ago'
+    time:'1 years ago',
+    genre:'comedy'
 },
 {
     id:20,
@@ -188,7 +207,8 @@ export const dataInfo=[{
     description:'Harry Potter And The Goblet of Fire | Death Eaters at the World Cup | ClipZone: Villains & Heroes',
     owner:'Aman Singh',
     views:'5.9M Views',
-    time:'12 years ago'
+    time:'12 years ago',
+    genre:'entertainment'
 },
 {
     id:21,
@@ -197,6 +217,39 @@ export const dataInfo=[{
     description:'🇮🇳🥇 Neeraj Chopra wins historic gold for India | #Tokyo2020 Highlights',
     owner:'Aman Singh',
     views:'5.9M Views',
-    time:'12 years ago'
+    time:'12 years ago',
+    genre:'sports'
+},
+{
+    id:22,
+    imageIcon:'https://i.ytimg.com/vi/baLojo56L5M/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCIzG-vtSJcQ6y2LJ6ouQnaKRCgbw',
+    video_url:"https://www.youtube.com/embed/02pr2W7FT-c?si=dYX5ILLMpBB3S2FK",
+    description:'Anti-Islamist Comedian DESTROYS Hamas',
+    owner:'Aman Singh',
+    views:'5M Views',
+    time:'1 years ago',
+    genre:'comedy'
+},
+{
+    id:23,
+    imageIcon:'https://i.ytimg.com/vi/xcLCe5iBvVc/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDnxWQmOS4mehyG5GS-7gSs-I-lyw',
+    video_url:"https://www.youtube.com/embed/02pr2W7FT-c?si=dYX5ILLMpBB3S2FK",
+    description:'The Gospel According to Berkeley.',
+    owner:'Aman Singh',
+    views:'3M Views',
+    time:'1 years ago',
+    genre:'comedy'
+
+},
+{
+    id:24,
+    imageIcon:'https://i.ytimg.com/vi/eNjcAgNu1Ac/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCHQJRoJegtHwyIvk7O0-35oHFKDw',
+    video_url:"https://www.youtube.com/embed/02pr2W7FT-c?si=dYX5ILLMpBB3S2FK",
+    description:'Trump: We speak English here, not Spanish',
+    owner:'Aman Singh',
+    views:'3M Views',
+    time:'1 years ago',
+    genre:'news'
+
 }
 ]
