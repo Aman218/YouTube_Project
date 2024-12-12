@@ -1,0 +1,13 @@
+#suggested-video-id{
+    grid-template-columns: repeat(2,1fr);
+    
+}
+@media (max-width:876px){
+    #suggested-img{
+        width: 100%;
+        height: 10rem;
+    }
+    #bottom-margin{
+        margin-bottom: 4rem;
+    }
+}

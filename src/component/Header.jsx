@@ -7,6 +7,7 @@ import { useState } from 'react';
 import './Header.css';
 import VideoCard from './VideoCard';
 import { dataInfo } from '../utils/dummyData';
+import { Outlet } from 'react-router-dom';
 function Header(){
 
  const [flag,setFlag]=useState(true);
@@ -45,8 +46,8 @@ function Header(){
                </div>
           </div>
           <div className='flex'>
-        <Sidebar flag={flag}/>
-        <VideoCard flag={flag} titleName={titleName}/>
+        <Outlet context={{ flag, titleName }}/>
+      
         </div>
         </>
     )

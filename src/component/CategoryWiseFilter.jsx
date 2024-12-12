@@ -1,5 +1,5 @@
 import { dataInfo } from "../utils/dummyData"
-import { genres } from "../utils/genrecollection"
+import { genres } from "../utils/genrecollection";
 function CategoryWiseFilter(props){
  
 function handleClick(e){
@@ -22,7 +22,7 @@ function handleClick(e){
            {
             genres.map((genre,index)=>{
                 return (
-                    <button key={index} onClick={(e)=>{handleClick(e)}} className="text-white py-1 px-5 text-[0.9rem] font-semibold hover:bg-[#464644] rounded-md mr-5 bg-[#212121]">{genre}</button>
+                    <button key={index} onClick={(e)=>{handleClick(e)}} className="text-white py-1 px-5 text-[0.9rem] font-semibold hover:bg-[#464644] rounded-md mr-3 bg-[#212121]">{genre}</button>
                     
                 )
             })
