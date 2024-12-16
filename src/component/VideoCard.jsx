@@ -6,16 +6,27 @@ import CategoryWiseFilter from "./CategoryWiseFilter";
 import { useOutletContext } from "react-router-dom";
 function VideoCard(){
   const { flag, titleName } = useOutletContext(); // Access props passed via context
-const [video_details,setVideoDetails]=useState(dataInfo);
+const [video_details,setVideoDetails]=useState([]);
+const [dummy_video_details,set_dummy_VideoDetails]=useState([]);
+
+useEffect(()=>{
+  fetchdata()
+},[])
+async function fetchdata(){
+  let response=await fetch('http://localhost:3000');
+  let data=await response.json();
+  setVideoDetails(data);
+  set_dummy_VideoDetails(data)
+}
 
 useEffect(() => {
     if (titleName) {
-      const filteredArray = dataInfo.filter((videoDes) =>
+      const filteredArray = dummy_video_details.filter((videoDes) =>
         videoDes.description.toLowerCase().includes(titleName.toLowerCase())
       );
       setVideoDetails(filteredArray);
     } else {
-      setVideoDetails(dataInfo);
+      setVideoDetails(dummy_video_details);
     }
   }, [titleName]);
 

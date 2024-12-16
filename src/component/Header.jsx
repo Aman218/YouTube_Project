@@ -8,6 +8,7 @@ import './Header.css';
 import VideoCard from './VideoCard';
 import { dataInfo } from '../utils/dummyData';
 import { Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 function Header(){
 
  const [flag,setFlag]=useState(true);
@@ -40,10 +41,10 @@ function Header(){
                         </div>
                      
                </div>
-               <div className="sec-3 mr-5">
+               <Link to='/SignIn'><div className="sec-3 mr-5">
                     <MoreVertIcon id='dot-icon'/>
                     <button id='sec3-button' className='border border-[#959593b1] rounded-full p-2 px-4 hover:rounded-full hover:bg-[#212121] hover:border-[#0f0f0f] '> <PersonIcon className='border border-red-100 rounded-full text-[#fff] '/> <span id='signin-text'>Sign In</span> </button>
-               </div>
+               </div></Link>
           </div>
           <div className='flex'>
         <Outlet context={{ flag, titleName }}/>

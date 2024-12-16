@@ -21,7 +21,7 @@ import { useOutletContext } from 'react-router-dom';
 
 function Sidebar() {
    // console.log(props)
-   const { flag, titleName } = useOutletContext(); // Access props passed via context
+   const { flag} = useOutletContext(); // Access props passed via context
    return (
       <>
          {flag ?
@@ -53,7 +53,7 @@ function Sidebar() {
 
 
             </div> :
-            <div className='sideBar-description w-[15%] overflow-y-scroll h-[85vh] text-white fixed z-20 bg-[#0f0f0f] left-0 mt-[4rem]'>
+            <div className='sideBar-description w-[15%] overflow-y-scroll scroll-bar h-[85vh] text-white fixed z-50 bg-[#0f0f0f] left-0 mt-[4rem]'>
                <div className="sidebar-1 border-b border-[#212121] mb-2">
                   <Link to='/'><div className='p-3 cursor-pointer hover:bg-[#212121]'>
                      <HomeIcon />

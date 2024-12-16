@@ -17,7 +17,7 @@
         width: 40%;
     }
     #video{
-        width: 50%;
+        width: 60%;
        
     }
     #height{
@@ -52,10 +52,20 @@
          /* justify-content: start; */
     }
     #flex{
+        margin-bottom: 0.7rem;
+    }
+    #flex{
+        justify-content: space-between;
+    }
+    #three-dot{
+        display: none;
+    }
+    #flex2{
         justify-content: space-between;
     }
 }
 @media (max-width:414px) {
+   
     #flex2{
         justify-content: space-between;
     }
@@ -65,7 +75,15 @@
     #download-btn{
         font-size: 0.8rem;
     }
-    #three-dot{
-        display: none;
+   
+}
+@media(max-width:1040px){
+    #head-des{
+        font-size: 1rem;
+    }
+}
+@media(max-width:440px){
+    #head-des{
+        font-size: 0.8rem;
     }
 }

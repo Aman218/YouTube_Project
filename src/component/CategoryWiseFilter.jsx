@@ -1,14 +1,32 @@
 import { dataInfo } from "../utils/dummyData"
 import { genres } from "../utils/genrecollection";
+import { useState, useEffect } from "react";
 function CategoryWiseFilter(props){
+    const [video_details,setVideoDetails]=useState([]);
+    useEffect(()=>{
+        fetchdata()
+    },[])
+    async function fetchdata(){
+        let response=await fetch('http://localhost:3000');
+        let data=await response.json();
+        setVideoDetails(data);
+    }
+        useEffect(()=>{
+            fetchdata()
+        },[])
+        async function fetchdata(){
+            let response=await fetch('http://localhost:3000');
+            let data=await response.json();
+            setVideoDetails(data);
+        }
  
 function handleClick(e){
    console.log('Genre',e.target.innerText)
    if(e.target.innerText.toLowerCase()=='all'){
-    props.SetDetails(dataInfo)
+    props.SetDetails(video_details)
     return;
    }
-   let new_filterArr=dataInfo.filter((data)=>{
+   let new_filterArr=video_details.filter((data)=>{
     if(data.genre.toLowerCase()==e.target.innerText.toLowerCase()){
         return true;
     }

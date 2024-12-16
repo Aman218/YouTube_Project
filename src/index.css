@@ -9,3 +9,24 @@
     font-family: "Montserrat", serif;
     /* font-family: "Roboto", sans-serif; */
 }
+
+    .scroll-bar::-webkit-scrollbar {
+        width: 7px; /* Width of the scrollbar */
+        
+      }
+      
+      .scroll-bar::-webkit-scrollbar-track {
+        background: #0f0f0f; /* Background of the scrollbar track */
+      }
+      
+      .scroll-bar::-webkit-scrollbar-thumb {
+        background: #ffffff; /* Color of the scrollbar thumb */
+        border-radius: 1px; /* Rounded corners for the scrollbar thumb */
+        padding: 1rem;
+      }
+      
+      .scroll-bar::-webkit-scrollbar-thumb:hover {
+        background: #ff0000; /* Color of the scrollbar thumb on hover */
+      }
+
+

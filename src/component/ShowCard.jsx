@@ -7,7 +7,7 @@ function ShowCard(props){
     return (
         <>
 
-            <Link to={`/viewing_video/${props.video.id}`}><div className="item text-white">
+            <Link to={`/viewing_video/${props.video._id}`}><div className="item text-white">
                 <img src={props.video.imageIcon} alt="" id='img-size' className='rounded-[8px]'/>
                 <div className='flex gap-2 mt-3'>
                     <div>

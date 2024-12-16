@@ -8,6 +8,7 @@ import Header from './component/Header.jsx';
 import Sidebar from './component/SideBar.jsx';
 import VideoCard from './component/VideoCard.jsx';
 import ViewVideo from './component/ViewVideo.jsx';
+import SignIn from './component/SignIn.jsx';
 
 let appRouter=createBrowserRouter([
   {
@@ -30,6 +31,10 @@ let appRouter=createBrowserRouter([
 
     ]
     
+  },
+  {
+    path:"/SignIn",
+    element:<SignIn/>
   },
   {
     path:'*',
