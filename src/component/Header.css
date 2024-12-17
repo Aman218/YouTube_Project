@@ -191,3 +191,27 @@
         margin-left: -14px;
     }
 }
+
+@media (max-width:1055px){
+    #drop-down{
+        width: 30%;
+    }
+}
+@media (max-width:855px){
+    #drop-down{
+        width: 38%;
+    }
+}
+
+@media (max-width:655px){
+    #drop-down{
+        width: 48%;
+    }
+}
+@media (max-width:455px){
+    #drop-down{
+        width: 58%;
+        
+    }
+
+}

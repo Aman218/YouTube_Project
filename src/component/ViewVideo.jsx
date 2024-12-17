@@ -90,6 +90,9 @@ function ViewVideo(){
                <h1 className="text-[0.9rem] font-medium">{filteredData[0].views} <span className=' ml-3'>{filteredData[0].time}</span></h1>
                <h3 className="text-[0.96rem]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis pariatur nisi facilis eaque sequi fuga tempore delectus temporibus eum ducimus quam itaque rerum autem, ullam velit minus tempora. Error, ipsam?...More</h3>
             </div>
+            <div className="comment-section">
+              
+            </div>
               
           </div>:''
 }

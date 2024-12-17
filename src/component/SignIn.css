@@ -1,0 +1,35 @@
+@media (max-width:1055px){
+    #inner-div{
+        width: 70%;
+    }
+    .input-box{
+        width: 60%;
+   }
+}
+@media (max-width:903px){
+    #inner-div{
+        width: 78%;
+    }
+    .input-box{
+        width: 60%;
+   }
+}
+@media (max-width:803px){
+    #inner-div{
+        width: 88%;
+    }
+    .input-box{
+        width: 60%;
+   }
+}
+@media (max-width:603px){
+    #inner-div{
+        width: 95%;
+    }
+    .input-box{
+         width: 70%;
+    }
+    #text{
+        font-size: 0.8rem;
+    }
+}

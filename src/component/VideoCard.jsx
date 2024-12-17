@@ -40,7 +40,7 @@ useEffect(() => {
               
             video_details.map((video)=>{
                  return(
-                    <ShowCard key={video.id} video={video}/>
+                    <ShowCard key={video._id} video={video}/>
                  )
             })
             

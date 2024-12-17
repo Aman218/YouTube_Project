@@ -9,6 +9,7 @@ import Sidebar from './component/SideBar.jsx';
 import VideoCard from './component/VideoCard.jsx';
 import ViewVideo from './component/ViewVideo.jsx';
 import SignIn from './component/SignIn.jsx';
+import SignUp from './component/SignUp.jsx';
 
 let appRouter=createBrowserRouter([
   {
@@ -35,6 +36,10 @@ let appRouter=createBrowserRouter([
   {
     path:"/SignIn",
     element:<SignIn/>
+  },
+  {
+    path:"/SignUp",
+    element:<SignUp/>
   },
   {
     path:'*',
