@@ -6,6 +6,7 @@ let databaseName='Youtube_Clone';
 mongoose.connect(`mongodb://localhost:27017/${databaseName}`);
 import { userRoutes } from './Routes/User.routes.js';
 import cors from 'cors';
+import { commentRoutes } from './Routes/comment.routes.js';
 
 
 app.use(cors());
@@ -30,7 +31,7 @@ db.on('error',()=>{
 
 routes(app);
 userRoutes(app);
-
+commentRoutes(app);
 
 
 app.listen(3000,()=>{

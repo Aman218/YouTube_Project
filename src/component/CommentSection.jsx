@@ -1,108 +1,173 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import PersonIcon from '@mui/icons-material/Person';
-import MenuIcon from '@mui/icons-material/Menu';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import DeleteIcon from '@mui/icons-material/Delete';
-import BorderColorIcon from '@mui/icons-material/BorderColor';
-import './CommentSection.css'
+import { useState, useEffect } from "react";
+import {Link} from 'react-router-dom';
 
 function CommentSection() {
-
   const token = localStorage.getItem('token');
-
   const [commentDetails, set_comment] = useState([]);
-  const [content, set_content] = useState('');
+  const [content, set_content] = useState(''); // For new comments
+  const [editMode, setEditMode] = useState(null); // To track which comment is being edited
+  const [editContent, setEditContent] = useState(''); // For editing existing comment
   const Name_user = localStorage.getItem('Name');
-  const [flag, setFlag] = useState(false);
-  function handleChange(e) {
-    set_content(e.target.value);
-  }
-  function handleclick() {
-    if (content == '') {
-      return;
-    }
-    set_comment([...commentDetails, content])
-    set_content('')
-  }
 
-  function handleEdit(e) {
-    let parent = e.target.closest('#parent-container');
-    let child = parent.querySelector('#content');
-    set_content(child.innerText);
-    parent.remove()
+  // Fetch comments from backend
+  useEffect(() => {
+    fetch('http://localhost:3000/getComments')
+      .then((response) => response.json())
+      .then((data) => set_comment(data))
+      .catch((error) => console.error("Error fetching comments:", error));
+  }, [commentDetails]);
 
-  }
-  function handleDelete(e) {
-    e.target.closest('#parent-container').remove();
+  // Add a new comment
+  const handleclick = () => {
+    if (!content.trim()) return;
 
-  }
+    fetch('http://localhost:3000/add', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ content, username: Name_user }),
+    })
+      .then((response) => response.json())
+      .then((newComment) => set_comment([newComment, ...commentDetails]))
+      .catch((error) => console.error("Error adding comment:", error));
+
+    set_content(''); // Reset new comment content
+  };
+
+  // Delete a comment
+  const handleDelete = (id) => {
+    fetch(`http://localhost:3000/delete/${id}`, {
+      method: 'DELETE',
+    })
+      .then((response) => {
+        if (response.ok) {
+          set_comment(commentDetails.filter((comment) => comment._id !== id));
+        } else {
+          console.error("Error deleting comment:", response.statusText);
+        }
+      })
+      .catch((error) => console.error("Error deleting comment:", error));
+  };
+
+  // Update a comment
+  const handleEdit = (id, newContent) => {
+    fetch(`http://localhost:3000/edit/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ content: newContent }),
+    })
+      .then((response) => response.json())
+      .then((updatedComment) => {
+        const updatedComments = commentDetails.map((comment) =>
+          comment._id === id ? updatedComment : comment
+        );
+        set_comment(updatedComments);
+        setEditMode(null); // Reset edit mode after saving
+        setEditContent(''); // Reset edit content
+      })
+      .catch((error) => console.error("Error updating comment:", error));
+  };
+
   return (
-    <>
+    <div className="max-w-4xl mx-auto p-4 mt-3 rounded-lg bg-[#1a1919] text-white">
+      {/* Comment Input Section */}
+      {token ? (
+        <div className="flex flex-col sm:flex-row gap-4 mb-6">
+          <input
+            type="text"
+            placeholder="Add a comment..."
+            value={content}
+            onChange={(e) => set_content(e.target.value)} // New comment input
+            className="p-3 border border-gray-600 rounded-md w-full bg-[#212121] text-white focus:outline-none focus:ring-2 focus:ring-white"
+          />
+          <button
+            onClick={handleclick}
+            className="p-3 bg-[#ff0000] text-white rounded-md w-full sm:w-auto hover:bg-green-700 focus:outline-none "
+          >
+            Comment
+          </button>
+        </div>
+      ) : (
+        <div className="mb-6 text-center text-gray-400">
+               <h1 className="  m-4 text-[#33f733] font-bold ">Please <Link to='/SignIn'><span className="text-white underline">Login</span> </Link>  in order to add comments</h1>
+        </div>
+      )}
 
-      {
-        token ?
-          <>
-            <div className="border-b border-white m-4">
-              <input onChange={handleChange} value={content} type="text" placeholder="Add Comment" className="border-none outline-none w-[100%] text-white pb-2 bg-[#0f0f0f] " />
-            </div>
-            <div className="m-4 text-end">
-              <button className="text-white font-bold bg-[#ff0000] px-4 py-1 rounded-lg hover:bg-white hover:text-[#ff0000]" onClick={handleclick}>Add</button>
-            </div>
+      {/* Comments Section */}
+      <div className="space-y-4">
+        {commentDetails.map((comment,index) => (
+          
+          <div
+          
+            key={comment._id||index}
+            className="bg-[#212121] border border-gray-600 p-4 rounded-lg flex flex-col gap-2"
+          >
+            {/* Comment Text */}
+            {editMode === comment._id ? (
+              <div className="flex flex-col gap-2">
+                <input
+                  type="text"
+                  value={editContent} // Use editContent for editing
+                  onChange={(e) => setEditContent(e.target.value)} // Update edit content
+                  className="p-3 border border-gray-600 rounded-md w-full bg-[#212121] text-white focus:outline-none focus:ring-2 focus:ring-white"
+                />
+                <div className="flex gap-4 mt-2">
+                  <button
+                    onClick={() => handleEdit(comment._id, editContent)} // Save edited comment
+                    className="p-2 bg-[#ff0000] text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-white"
+                  >
+                    Save
+                  </button>
+                  <button
+                    onClick={() => {
+                      setEditMode(null); // Cancel editing
+                      setEditContent(''); // Reset edit content
+                    }}
+                    className="p-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-white"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <>
+                <p className="text-sm">{comment.content}</p>
+                {/* User Info */}
+                <div className="flex justify-between items-center text-xs text-gray-400">
+                <p>Posted by: {comment.username ? comment.username.charAt(0).toUpperCase() + comment.username.slice(1) : 'Anonymous'}</p>
+                  <p>2 hours ago</p>
+                </div>
+              </>
+            )}
 
-            {
-              commentDetails.length > 0 ?
-                (
-                  commentDetails.map((map) => {
-                    return (
-                      <div id='parent-container' className="border-b border-[#5e5c5c75] mb-3 p-2 text-white">
-                      <div  className="  flex w-[100%] items-center  text-white relative ">
-                        <div>
-                          <div className="p-1 border rounded-full">
-                            <PersonIcon />
-                          </div>
-                        </div>
-                        <div className="ml-2 flex flex-col">
-                          <div className="flex justify-between w-[100%]">
-                            <span id='name-sec' className="font-bold text-[#37ff00]">
-                              @{Name_user.slice(0, 1).toUpperCase() + Name_user.slice(1)}
-                            </span>
-                            <div id='btn' className="absolute right-0 cursor-pointer flex items-center bg-[#212121] justify-center">
-                              <div onClick={handleEdit} className="flex hover:bg-[#7a7878] items-center p-2">
-                                <BorderColorIcon id='edit_btn' className="text-[#ff0000]" />
-                                <button>Edit</button>
-                              </div>
-
-                              <div onClick={handleDelete} className="hover:bg-[#7a7878] p-2 flex items-center">
-                                <DeleteIcon id='delete-btn' className="text-[#ff0000]" />
-                                <button>Delete</button>
-                              </div>
-                            </div>
-                          </div>
-
-                     
-                        </div>
-                      
-
-
-
-                      </div>
-                      <div className="ml-11 mt-[-0.5rem]">
-                            <span id="content" className="inline-block w-[78%] text-[0.8rem]  ">
-                              {map}
-                            </span>
-                          </div>
-                      </div>
-                    )
-                  })
-                ) : null
-            }
-
-
-          </> :
-          <h1 className="  m-4 text-[#ff0021] font-bold ">Please <Link to='/SignIn'><span className="text-white underline">Login</span> </Link>  in order to add comments</h1>
-      }
-    </>
-  )
+            {/* Action Buttons */}
+            {comment.username === Name_user && !editMode && (
+              <div className="flex gap-4 mt-2">
+                <button
+                  onClick={() => {
+                    setEditMode(comment._id); // Enter edit mode
+                    setEditContent(comment.content); // Pre-fill the edit content
+                  }}
+                  className="text-[#fffc37] font-bold hover:text-[#e4e146b8] text-xs"
+                >
+                  Edit
+                </button>
+                <button
+                  onClick={() => handleDelete(comment._id)}
+                  className="text-[#ff0000] font-bold hover:text-red-500 text-xs"
+                >
+                  Delete
+                </button>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
-export default CommentSection
+
+export default CommentSection;
