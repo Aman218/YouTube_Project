@@ -10,6 +10,7 @@ import VideoCard from './component/VideoCard.jsx';
 import ViewVideo from './component/ViewVideo.jsx';
 import SignIn from './component/SignIn.jsx';
 import SignUp from './component/SignUp.jsx';
+import ChannelDetails from './component/ChannelDetails.jsx';
 
 let appRouter=createBrowserRouter([
   {
@@ -25,6 +26,11 @@ let appRouter=createBrowserRouter([
           </>
         ),
       },
+      {
+          path:'/channelDetails',
+          element:<ChannelDetails/>
+      },
+
       {
         path:'/viewing_video/:id',
         element:<ViewVideo/>

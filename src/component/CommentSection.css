@@ -1,0 +1,54 @@
+@media (max-width:1055px) {
+    #content{
+        width: 60%;
+        font-size: 0.8rem;
+    }
+    
+}
+@media (max-width:885px) {
+    #content{
+        width: 70%;
+        font-size: 0.8rem;
+    }
+    
+}
+@media (max-width:885px) {
+    #content{
+        width: 60%;
+        font-size: 0.8rem;
+    }
+    
+}
+@media (max-width:500px) {
+    #content{
+        width: 55%;
+        font-size: 0.6rem;
+    }
+    #name-sec{
+        font-size: 0.8rem;
+    }
+    #delete-btn,#edit_btn{
+        font-size: 0.8rem;
+        
+    }
+    #btn{
+        align-items: center;
+  font-size: 0.8rem;
+    }
+    
+}
+@media (max-width:417px) {
+    #content{
+        width: 45%;
+        font-size: 0.4rem;
+    }
+    #delete-btn,#edit_btn{
+        font-size: 0.8rem;
+        
+    }
+    #btn{
+        align-items: center;
+  font-size: 0.8rem;
+    }
+    
+}

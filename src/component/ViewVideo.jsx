@@ -10,6 +10,7 @@ import ShareIcon from '@mui/icons-material/Share';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import LinearScaleIcon from '@mui/icons-material/LinearScale';
 import { useState,useEffect } from "react";
+import CommentSection from "./CommentSection";
 import './ViewVideo.css'
 function ViewVideo(){
    const [video_details,setVideoDetails]=useState([]);
@@ -91,7 +92,7 @@ function ViewVideo(){
                <h3 className="text-[0.96rem]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis pariatur nisi facilis eaque sequi fuga tempore delectus temporibus eum ducimus quam itaque rerum autem, ullam velit minus tempora. Error, ipsam?...More</h3>
             </div>
             <div className="comment-section">
-              
+              <CommentSection/>
             </div>
               
           </div>:''

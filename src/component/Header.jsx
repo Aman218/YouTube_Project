@@ -10,7 +10,11 @@ import VideoCard from './VideoCard';
 import { dataInfo } from '../utils/dummyData';
 import { Outlet } from 'react-router-dom';
 import { Link, useNavigate } from 'react-router-dom';
+import SwitchAccountIcon from '@mui/icons-material/SwitchAccount';
+import GoogleIcon from '@mui/icons-material/Google';
+import InventoryIcon from '@mui/icons-material/Inventory';
 function Header() {
+   const navigate=useNavigate();
    const [dropdownVisible, setDropdownVisible] = useState(false); 
    const token = localStorage.getItem('token');
    function handleDropdownToggle() {
@@ -20,8 +24,10 @@ function Header() {
    // Handle Logout
    function handleLogout() {
       localStorage.removeItem('token');
-      localStorage.removeItem('Name');   
-      setDropdownVisible(false);         
+      localStorage.removeItem('Name');  
+      alert('Logged out Successfully'); 
+      setDropdownVisible(false);  
+      navigate('/')      
       
    }
    const Name_user = localStorage.getItem('Name');
@@ -63,14 +69,27 @@ function Header() {
                <button onClick={handleDropdownToggle} className='border flex justify-center items-center  font-bold border-[#959593b1] rounded-full bg-[#fff]  px-2  hover:rounded-full hover:bg-[#212121] hover:border-[#fff] '> <span className=' text-2xl font-bold text-[#ff0000]'>{Name_user.charAt(0).toUpperCase()}</span> </button>
                </div>
                {dropdownVisible && (
-                  <div id='drop-down' className="dropdown-menu absolute h-[50vh] w-[24%] top-[53px] right-3 bg-[rgb(33,33,33)] p-2 rounded-lg shadow-lg">
+                  <div id='drop-down' className="dropdown-menu  absolute  w-[24%] top-[53px] right-3 bg-[rgb(33,33,33)] p-2 rounded-lg shadow-lg">
                      <div className='flex gap-4'>
                      <button className=' flex justify-center items-center  font-bold  rounded-full   hover:rounded-full hover:bg-[#212121] hover:border-[#fff] '> <span className=' text-2xl font-bold text-[#ff0000]'>{Name_user.charAt(0).toUpperCase()}</span> </button> 
                         <div>
-                           <h1>{Name_user}</h1>
+                           <h1>{Name_user.slice(0,1).toUpperCase()+Name_user.slice(1)}</h1>
                            <h1>{Email_user}</h1>
-                           <h1 className='text-blue-700 cursor-pointer font-medium'>View Your Channel</h1>
+                           <Link to='/channelDetails'><h1 className='text-[#3d3aee] hover:text-[#ff0000] cursor-pointer font-medium'>View Your Channel</h1></Link>
                         </div>
+                     </div>
+                     <div className='flex gap-2 items-center border-t-2 mt-3 pt-3'>
+                        <GoogleIcon/>
+                     <button className="text-white p-1 w-full text-left hover:text-[#ff0000]">Google Account</button>
+                     </div>
+                     <div className='flex gap-2 items-center border-t-2 mt-3 pt-3'>
+                        <InventoryIcon/>
+                     <button className="text-white p-1 w-full text-left hover:text-[#ff0000]">Purchases and Membership</button>
+                     </div>
+
+                     <div className='flex gap-2 items-center border-t-2 mt-3 pt-3'>
+                        <SwitchAccountIcon/>
+                     <button className="text-white p-1 w-full text-left hover:text-[#ff0000]">Switch Account</button>
                      </div>
                      <div className='flex gap-2 items-center border-t-2 mt-3 pt-3'>
                         <LogoutIcon/>

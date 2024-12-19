@@ -192,6 +192,11 @@
     }
 }
 
+@media (max-width:1309px){
+    #drop-down{
+        overflow-y: scroll;
+    }
+}
 @media (max-width:1055px){
     #drop-down{
         width: 30%;
