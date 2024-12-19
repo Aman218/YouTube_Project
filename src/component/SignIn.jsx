@@ -9,7 +9,7 @@ function SignIn() {
     password:''
   });
   const [msg,set_msg]=useState('');
-  const [err_msg,set_err_msg]=useState('')
+  const [err_msg,set_err_msg]=useState('');
   function handleEmailChange(e){
     setUserDetails({...user_details,email:e.target.value})
     set_err_msg('')
@@ -88,12 +88,12 @@ function SignIn() {
            {err_msg&&<div className="text-[#ff0000]">{err_msg}</div>}
            {msg&&<div className="text-green-600">{msg}</div>}
           <div  className="my-4 input-box w-[65%]">
-            <input  className="  border-[#ff000000] text-black outline-none focus:outline-1 focus:outline-[#ff0000] w-[100%] py-[0.4rem] px-4 placeholder-[#212121] placeholder:font-semibold" type="email" name="" id="mail-box" placeholder="Enter Mail" value={user_details.email} onChange={(e)=>{
+            <input  className=" font-bold  border-[#ff000000] text-black outline-none focus:outline-1 focus:outline-[#ff0000] w-[100%] py-[0.4rem] px-4 placeholder-[#212121] placeholder:font-semibold" type="email" name="" id="mail-box" placeholder="Enter Mail" value={user_details.email} onChange={(e)=>{
               handleEmailChange(e)
             }} />
           </div>
           <div className="my-4 input-box w-[65%]" >
-            <input  className=" placeholder-[#212121] placeholder:font-semibold border-[#ff000000] text-black outline-none focus:outline-1 focus:outline-[#ff0000] w-[100%] py-[0.4rem] px-4 " type="password" name="" id="password-box" placeholder="Enter Password" value={user_details.password} onChange={(e)=>{
+            <input  className=" font-bold placeholder-[#212121] placeholder:font-semibold border-[#ff000000] text-black outline-none focus:outline-1 focus:outline-[#ff0000] w-[100%] py-[0.4rem] px-4 " type="password" name="" id="password-box" placeholder="Enter Password" value={user_details.password} onChange={(e)=>{
               handlePassChange(e)
             }} />
           </div>

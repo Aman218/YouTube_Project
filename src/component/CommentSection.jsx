@@ -72,7 +72,7 @@ function CommentSection() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-4 mt-3 rounded-lg bg-[#1a1919] text-white">
+    <div className="max-w-4xl mx-auto p-4 mt-3 rounded-lg bg-[#212121] text-white">
       {/* Comment Input Section */}
       {token ? (
         <div className="flex flex-col sm:flex-row gap-4 mb-6">
@@ -92,7 +92,7 @@ function CommentSection() {
         </div>
       ) : (
         <div className="mb-6 text-center text-gray-400">
-               <h1 className="  m-4 text-[#33f733] font-bold ">Please <Link to='/SignIn'><span className="text-white underline">Login</span> </Link>  in order to add comments</h1>
+               <h1 className="  m-4 text-white font-bold ">Please <Link to='/SignIn'><span className="text-[#33f733] underline">Login</span> </Link>  in order to add comments</h1>
         </div>
       )}
 
@@ -134,10 +134,11 @@ function CommentSection() {
               </div>
             ) : (
               <>
-                <p className="text-sm">{comment.content}</p>
+                <p className="text-sm font-bold">{comment.content}</p>
                 {/* User Info */}
                 <div className="flex justify-between items-center text-xs text-gray-400">
-                <p>Posted by: {comment.username ? comment.username.charAt(0).toUpperCase() + comment.username.slice(1) : 'Anonymous'}</p>
+                <p className=" text-white">Posted by: <span className="text-[#15ff00] font-bold">
+                {comment.username ? comment.username.charAt(0).toUpperCase() + comment.username.slice(1) : 'Anonymous'} </span></p>
                   <p>2 hours ago</p>
                 </div>
               </>

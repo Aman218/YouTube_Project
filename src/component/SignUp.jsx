@@ -97,17 +97,17 @@ function SignUp(){
             {err_msg&&<div className="text-[#ff0000]">{err_msg}</div>}
             {msg&&<div className="text-green-600">Registration Successful</div>}
           <div  className="my-4 input-box w-[60%]">
-            <input  className="placeholder-[#212121] placeholder:font-semibold  border-[#ff000000] text-black outline-none focus:outline-1 focus:outline-[#ff0000] w-[100%] py-[0.4rem] px-4" type="text" value={user_details.name} name="" id="name" placeholder="Enter Name" onChange={(e)=>{
+            <input  className="placeholder-[#212121] font-bold placeholder:font-semibold  border-[#ff000000] text-black outline-none focus:outline-1 focus:outline-[#ff0000] w-[100%] py-[0.4rem] px-4" type="text" value={user_details.name} name="" id="name" placeholder="Enter Name" onChange={(e)=>{
               handleNameChange(e)
             }} />
           </div>
           <div  className="my-4 input-box w-[60%]">
-            <input  className=" placeholder-[#212121] placeholder:font-semibold border-[#ff000000] text-black outline-none focus:outline-1 focus:outline-[#ff0000] w-[100%] py-[0.4rem] px-4" type="email" value={user_details.email} name="" id="email" placeholder="Enter Mail" onChange={(e)=>{
+            <input  className=" placeholder-[#212121] font-bold placeholder:font-semibold border-[#ff000000] text-black outline-none focus:outline-1 focus:outline-[#ff0000] w-[100%] py-[0.4rem] px-4" type="email" value={user_details.email} name="" id="email" placeholder="Enter Mail" onChange={(e)=>{
               handleEmailChange(e)
             }}  />
           </div>
           <div className="my-4 input-box w-[60%]" >
-            <input  className="placeholder-[#212121] placeholder:font-semibold  border-[#ff000000] text-black outline-none focus:outline-1 focus:outline-[#ff0000] w-[100%] py-[0.4rem] px-4 "  value={user_details.password} type="password" name="" id="password" placeholder="Enter Password" onChange={(e)=>{
+            <input  className="placeholder-[#212121] font-bold placeholder:font-semibold  border-[#ff000000] text-black outline-none focus:outline-1 focus:outline-[#ff0000] w-[100%] py-[0.4rem] px-4 "  value={user_details.password} type="password" name="" id="password" placeholder="Enter Password" onChange={(e)=>{
               handlePassChange(e)
             }}  />
           </div>
