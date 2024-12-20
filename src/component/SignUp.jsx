@@ -38,7 +38,7 @@ function SignUp(){
     }
 
     // Perform the registration request
-    fetch('http://localhost:3000/register', {
+    fetch('https://youtube-project-py16.onrender.com/register', {
         method: "POST",
         headers: {
             'Content-Type': "application/json"

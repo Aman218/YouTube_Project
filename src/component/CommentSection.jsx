@@ -11,7 +11,7 @@ function CommentSection() {
 
   // Fetch comments from backend
   useEffect(() => {
-    fetch('http://localhost:3000/getComments')
+    fetch('https://youtube-project-py16.onrender.com/getComments')
       .then((response) => response.json())
       .then((data) => set_comment(data))
       .catch((error) => console.error("Error fetching comments:", error));
@@ -21,7 +21,7 @@ function CommentSection() {
   const handleclick = () => {
     if (!content.trim()) return;
 
-    fetch('http://localhost:3000/add', {
+    fetch('https://youtube-project-py16.onrender.com/add', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ function CommentSection() {
 
   // Delete a comment
   const handleDelete = (id) => {
-    fetch(`http://localhost:3000/delete/${id}`, {
+    fetch(`https://youtube-project-py16.onrender.com/delete/${id}`, {
       method: 'DELETE',
     })
       .then((response) => {
@@ -52,7 +52,7 @@ function CommentSection() {
 
   // Update a comment
   const handleEdit = (id, newContent) => {
-    fetch(`http://localhost:3000/edit/${id}`, {
+    fetch(`https://youtube-project-py16.onrender.com/edit/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
