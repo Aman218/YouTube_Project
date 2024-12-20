@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import {routes} from './Routes/YoutubeData.routes.js'
 const app=express();
 let databaseName='Youtube_Clone';
-mongoose.connect(`mongodb://localhost:27017/${databaseName}`);
+mongoose.connect(`mongodb+srv://Internshala:Internshala@cluster0.3dyau.mongodb.net/`);
 import { userRoutes } from './Routes/User.routes.js';
 import cors from 'cors';
 import { commentRoutes } from './Routes/comment.routes.js';
