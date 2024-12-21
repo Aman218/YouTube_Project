@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import {Link} from 'react-router-dom';
+import {Link,useParams} from 'react-router-dom';
 
 function CommentSection() {
   const token = localStorage.getItem('token');
@@ -8,7 +8,8 @@ function CommentSection() {
   const [editMode, setEditMode] = useState(null); // To track which comment is being edited
   const [editContent, setEditContent] = useState(''); // For editing existing comment
   const Name_user = localStorage.getItem('Name');
-
+   const Video_id_Num=useParams().id;
+   console.log(Video_id_Num)
   // Fetch comments from backend
   useEffect(() => {
     fetch('https://youtube-project-py16.onrender.com/getComments')
@@ -26,7 +27,7 @@ function CommentSection() {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ content, username: Name_user }),
+      body: JSON.stringify({ content, username: Name_user ,Video_id_Num}),
     })
       .then((response) => response.json())
       .then((newComment) => set_comment([newComment, ...commentDetails]))

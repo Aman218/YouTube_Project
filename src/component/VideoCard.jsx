@@ -4,6 +4,7 @@ import ShowCard from "./ShowCard";
 import './VideoCard.css';
 import CategoryWiseFilter from "./CategoryWiseFilter";
 import { useOutletContext } from "react-router-dom";
+import Shimmer from './Shimmer.jsx';
 function VideoCard(){
   const { flag, titleName } = useOutletContext(); // Access props passed via context
 const [video_details,setVideoDetails]=useState([]);
@@ -35,18 +36,21 @@ useEffect(() => {
         <>
         
          <div id='button-category' className="fixed p-6  top-[3rem] w-[100%] bg-[#0f0f0f] z-20 left-[10.9rem] h-[4.5rem] text-white"> <CategoryWiseFilter SetDetails={setVideoDetails}/></div> 
-        <div id={`${flag?'grid':'grid-width'}`}>
-        {
+      {video_details.length>0?
+            <div id={`${flag?'grid':'grid-width'}`}>
+            {
+                  
+                video_details.map((video)=>{
+                     return(
+                        <ShowCard key={video._id} video={video}/>
+                     )
+                })
+                
               
-            video_details.map((video)=>{
-                 return(
-                    <ShowCard key={video._id} video={video}/>
-                 )
-            })
-            
-          
-        }
-        </div>
+            }
+            </div>:
+            <Shimmer/>
+      }
        
         </>
     

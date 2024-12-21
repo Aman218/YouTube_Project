@@ -12,6 +12,7 @@ import LinearScaleIcon from '@mui/icons-material/LinearScale';
 import { useState,useEffect } from "react";
 import CommentSection from "./CommentSection";
 import './ViewVideo.css'
+import ShimmerView from "./ShimmerViewVideo";
 function ViewVideo(){
    const [video_details,setVideoDetails]=useState([]);
    const [filteredData,setFilteredData]=useState('');
@@ -95,7 +96,7 @@ function ViewVideo(){
               <CommentSection/>
             </div>
               
-          </div>:''
+          </div>:<ShimmerView/>
 }
           <div id='video_suggestion' className="w-[35%] ml-[-15px] my-[4.8rem]">
           <SuggestedVideo/>

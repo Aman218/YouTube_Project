@@ -1,9 +1,10 @@
 import commentModel from "../Model/Comment.model.js";
 export function addComment(req,res){
-            const {content,username}=req.body;
+            const {content,username,Video_id_Num}=req.body;
             const new_comment=new commentModel({
                  content,
-                 username
+                 username,
+                 Video_id_Num
             })
             new_comment.save().then((data)=>{
                 if(!data){
@@ -16,7 +17,8 @@ export function addComment(req,res){
 
 }
 export function getComment(req,res){
-    commentModel.find().then((data)=>{
+   
+    commentModel.findOne({Video_id_Num}).then((data)=>{
         if(!data){
             res.status(404).send('No comments found');
         }

@@ -10,6 +10,10 @@ const commentSchema=new Schema({
     username:{
         type:String,
         required:false
+    },
+    Video_id_Num:{
+        type:String,
+        required:true
     }
 })
 const commentModel=mongoose.model('comments',commentSchema);
