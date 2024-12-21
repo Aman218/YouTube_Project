@@ -35,5 +35,5 @@ This repository contains a fully functional YouTube clone built with modern web 
 - https://drive.google.com/file/d/1Y9NrXsIZgjUDbWAG-EoGppZc4HuHLgBS/view?usp=sharing
 
 ## Deployed Website Link
-- https://you-tube-project-gamma.vercel.app/
+- https://you-tube-project-61ib.vercel.app/
 
