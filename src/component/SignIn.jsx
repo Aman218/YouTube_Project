@@ -2,6 +2,7 @@ import { Link,useNavigate } from 'react-router-dom';
 import HomeIcon from '@mui/icons-material/Home';
 import './SignIn.css';
 import { useState } from 'react';
+import YoutubeIcon from '../assets/Youtube_Icon.png';
 function SignIn() {
   const navigate = useNavigate();
   const [user_details,setUserDetails]=useState({
@@ -80,7 +81,7 @@ function SignIn() {
       <div id='outer-div' className="flex h-[80vh] w-[85%] mx-auto my-5 mt-[4rem]  justify-center items-center text-white flex-col">
         <div id='inner-div' className=" bg-[#212121] w-[50%]  rounded-lg flex flex-col items-center">
           <div className="flex mt-1 items-center">
-            <img src="https://cdn.icon-icons.com/icons2/1584/PNG/512/3721679-youtube_108064.png" width='60px' height='100px' alt="" />
+            <img src={YoutubeIcon} width='60px' height='100px' alt="" />
             <h1 className="font-bold ">YouTube Login</h1>
             <Link to='/'><span className="mx-5 text-[#ff0000]"><HomeIcon/></span></Link>
           </div>
