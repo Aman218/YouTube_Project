@@ -13,6 +13,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import SwitchAccountIcon from '@mui/icons-material/SwitchAccount';
 import GoogleIcon from '@mui/icons-material/Google';
 import InventoryIcon from '@mui/icons-material/Inventory';
+import YoutubeIcon from '../assets/Youtube_Icon.png';
 function Header() {
    const navigate=useNavigate();
    const [dropdownVisible, setDropdownVisible] = useState(false); 
@@ -51,7 +52,8 @@ function Header() {
                   <button onClick={handleMenuClick} className=' p-2 hover:rounded-full hover:bg-[#212121]'> <MenuIcon className='' /></button>
                </div>
                <div id='img-container' className='flex items-center ml-3'>
-                  <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/youtube_logo_icon_168737.png" id='img-id' alt="" width='30px' height='28px' />
+               <img src={YoutubeIcon} id='img-id' alt='' width='30px' height='28px' />
+
                   <h2 id='youtube-head' className='font-[500] text-[1.5rem]  pl-1'>YouTube</h2>
                </div>
             </div>
